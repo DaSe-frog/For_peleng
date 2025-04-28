@@ -36,7 +36,7 @@ Find logs in:
 
 #### log_level2.txt
 | Date Time | ID:     |Params: (Param1, Param2, Param3)|
-| :-------- | :------- | :----------||
+| :-------- | :------- | :----------|
 | `%Y-%m-%d` `%H:%M:%S`| ID: `int` | Params: (`int`,`int`,`int`)|
 
 ## Project tree
