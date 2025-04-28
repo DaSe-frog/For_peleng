@@ -17,6 +17,8 @@ int main() {
         return 1;
     }
 
+    bool exit_flag = false;
+
     EventGenerator generator(pipe);
     EventLogger logger(pipe);
 
@@ -33,9 +35,9 @@ int main() {
             std::cout << std::put_time(std::localtime(&now), "%H:%M:%S") << '\n';
         }},
         {"exit", [&](const char*) {
-            generator.stop();
+            exit_flag = true;
             logger.stop();
-            std::exit(0);
+            generator.stop();          
         }},
         {"faster", [&](const char*) { generator.faster(); }},
         {"slower", [&](const char*) { generator.slower(); }},
@@ -61,7 +63,7 @@ int main() {
     };
 
     std::string input;
-    while (true) {
+    while (!exit_flag) {
         std::cout << "> ";
         if (!std::getline(std::cin, input)) break;
 
@@ -81,8 +83,8 @@ int main() {
         }
     }
 
-    generator.stop();
     logger.stop();
-
+    generator.stop();
+    
     return 0;
 }
