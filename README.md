@@ -58,3 +58,37 @@ Find logs in:
         main.cpp
         Pipe.cpp
 ```
+
+## Commands
+
+The program supports the following commands for controlling event generation and logging:
+
+- `date`  
+  Displays the current date (`YYYY-MM-DD` format).
+
+- `time`  
+  Displays the current time (`HH:MM:SS` format).
+
+- `exit`  
+  Stops the event generator and logger, then exits the program.
+
+- `faster`  
+  Speeds up event generation by decreasing the interval.
+
+- `slower`  
+  Slows down event generation by increasing the interval.
+
+- `pause`  
+  Temporarily pauses event generation.
+
+- `resume`  
+  Resumes event generation after a pause.
+
+- `level <level>`  
+  Sets the logging level:
+  - 0 — Log only event IDs.
+  - 1 — Log event IDs and the first parameter.
+  - 2 — Log full event details (all parameters).
+
+- `stat`  
+  Displays the number of events logged.
