@@ -1,7 +1,13 @@
 
 ## Installation and the first run
+1) Download project:
 
-Install and run my project in bash (Linux or MINGW64):
+```bash
+git clone https://github.com/DaSe-frog/For_peleng.git
+cd For_peleng
+```
+
+2) Install and run my project in bash (Linux or MINGW64):
 
 ```bash
 bash build_run.sh
@@ -14,7 +20,7 @@ cd build
 cmake ..
 cmake --build .   
 ```
-After building you can find application file in:
+3) After building you can find application file in:
 - Windows: <path_to_progect>/build/Debug
 - Linux: <path_to_progect>/build/
 
