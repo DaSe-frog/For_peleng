@@ -4,7 +4,7 @@
 
 ```bash
 git clone https://github.com/DaSe-frog/For_peleng.git
-cd For_peleng
+cd For_peleng/
 ```
 
 2) Install and run my project in bash (Linux or MINGW64):
