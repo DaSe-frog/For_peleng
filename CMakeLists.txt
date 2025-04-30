@@ -14,3 +14,9 @@ add_executable(project
     src/EventLogger.cpp
     src/Pipe.cpp
 )
+
+if (UNIX)
+	set(THREADS_PREFER_PTHREAD_FLAG ON)
+	find_package(Threads REQUIRED)
+	target_link_libraries(project PRIVATE Threads::Threads)
+endif()
